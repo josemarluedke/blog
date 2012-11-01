@@ -11,7 +11,7 @@ gem 'inherited_resources'
 #gem 'has_scope'
 
 # Authentication
-#gem "devise", "~> 2.1.2"
+gem "devise"
 #gem "omniauth", "~> 1.1.0"
 #gem "omniauth-facebook", "~> 1.2.0"
 #gem "omniauth-twitter", "~> 0.0.12"
@@ -32,7 +32,7 @@ gem 'rack-google-analytics'
 #gem 'auto_html'
 
 # Administration
-#gem 'activeadmin'
+gem 'rails_admin'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.5'
