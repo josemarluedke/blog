@@ -78,6 +78,7 @@ GEM
       sass-rails (>= 3.1.1)
     foreigner (1.2.1)
       activerecord (>= 3.0.0)
+    friendly_id (4.0.9)
     fssm (0.2.9)
     haml (3.1.7)
     has_scope (0.5.1)
@@ -260,6 +261,7 @@ DEPENDENCIES
   execjs
   ffaker
   foreigner
+  friendly_id
   heroku
   inherited_resources
   initjs
