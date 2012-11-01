@@ -1,9 +1,5 @@
 require 'machinist/active_record'
 
-# Add your blueprints here.
-#
-# e.g.
-
 User.blueprint do
   name {'Josemar Davi Luedke'}
   email {'josemarluedke@gmail.com'}
@@ -15,4 +11,14 @@ Post.blueprint do
   title { "Post #{sn}" }
   content  { "Lorem ipsum..." }
   slug { "post-#{sn}" }
+  author { User.make! }
+end
+
+Category.blueprint do
+  name {  "Calegory #{sn}" }
+end
+
+Categorization.blueprint do
+  category { Category.make }
+  post { Post.make! }
 end

@@ -6,10 +6,13 @@ describe Post do
     it { should validate_presence_of :title }
     it { should validate_presence_of :content }
     it { should validate_presence_of :slug }
+    it { should validate_presence_of :author }
     it { should validate_uniqueness_of :slug }
   end
 
   describe "Associations" do
     it { should belong_to :author }
+    it { should have_many :categorizations }
+    it { should have_many :categories }
   end
 end
