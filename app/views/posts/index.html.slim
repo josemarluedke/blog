@@ -1,0 +1,20 @@
+h1 Listing posts
+
+table
+  tr
+    th Title
+    th Content
+    th Slug
+    th
+    th
+    th
+
+  - @posts.each do |post|
+    tr
+      td = post.title
+      td = post.content
+      td = post.slug
+      td = link_to 'Show', post
+
+br
+
