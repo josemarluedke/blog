@@ -1,0 +1,17 @@
+body
+  background: image-url('background.png')
+  font-family: $dosis-regular
+  color: $brown
+
+h1
+  font-family: $dosis-semibold
+
+a
+  color: darken($brown, 10%)
+  font-family: $dosis-semibold
+  &:hover
+    color: lighten($brown, 20%)
+
+section
+  @extend .row-fluid
+
