@@ -1,15 +1,23 @@
 doctype html
 html
   head
-    title blog
+    title [Blog] Josemar Davi Luedke - Software Developer
     = stylesheet_link_tag "application"
     meta[charset="utf-8"]
+    meta[name="viewport" content="width=device-width, initial-scale=1.0"]
+     -# Meta tags for facebook social graph
+    meta property="og:title" content="[Blog] Josemar Davi Luedke - Software Developer"
+    meta property="og:url" content="http://blog.josemarluedke.com"
+    meta property="og:image" content=avatar_url.html_safe
+    meta property="og:site_name" content="[Blog] Josemar Davi Luedke - Software Developer"
+    meta property="og:description" content="Josemar Davi Luedke is a Software Developer living in Porto Alegre/Brazil"
     = yield(:meta_tags)
     = csrf_meta_tag
     = javascript_include_tag "application"
   body
     = initjs_tag
     = render 'layouts/flash', flash: flash if flash.present?
-    = render 'layouts/header'
-    = yield
-    = render 'layouts/footer'
+    .container
+      = render 'layouts/header'
+      = yield
+      = render 'layouts/footer'
