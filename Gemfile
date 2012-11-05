@@ -41,7 +41,7 @@ group :assets do
   gem "compass-rails", "~> 1.0.3"
   gem 'bootstrap-sass'
   gem 'uglifier', '>= 1.0.3'
-  #gem 'turbolinks'
+  gem 'turbolinks'
 end
 
 group :production do
