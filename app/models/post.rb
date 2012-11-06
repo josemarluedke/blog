@@ -9,6 +9,12 @@ class Post < ActiveRecord::Base
   validates :title, :content, :slug, :author, presence: true
   validates :slug, uniqueness: true
 
+  scope :category, lambda { |name|
+    category = Category.where("name ILIKE ?", name).first
+    return [] if category.nil?
+    category.posts
+  }
+
   auto_html_for :content do
     redcarpet
   end
