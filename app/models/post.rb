@@ -21,6 +21,10 @@ class Post < ActiveRecord::Base
     redcarpet
   end
 
+  def cover
+    content_html.split(/<img\s+src="(.+?)".+?>/)[1]
+  end
+
   def should_generate_new_friendly_id?
     new_record?
   end
