@@ -12,6 +12,7 @@ Post.blueprint do
   content  { "Lorem ipsum..." }
   slug { "post-#{sn}" }
   author { User.make! }
+  published { true }
 end
 
 Category.blueprint do

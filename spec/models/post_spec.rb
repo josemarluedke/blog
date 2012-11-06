@@ -43,5 +43,17 @@ describe Post do
       it { should have(2).items }
       it { should == [@post_1, @post_2] }
     end
+
+    describe "public" do
+      before do
+        @post_1 = Post.make!
+        @post_2 = Post.make!
+        Post.make! published: false
+      end
+      subject { Post.public }
+
+      it { should have(2).items }
+      it { should == [@post_1, @post_2] }
+    end
   end
 end
