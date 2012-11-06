@@ -1,10 +1,12 @@
-h1 Listing posts
-
 = render 'template'
 
 .filter-category.hide= params[:category]
 #posts-list
-  ul.list
+  h1.title
+    | Listing posts 
+    - if params[:category].present?
+      | categorized in #{params[:category]}
+  .list
 
   .loading
     span Loading...

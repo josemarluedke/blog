@@ -41,7 +41,7 @@ RailsAdmin.config do |config|
   # Each model configuration can alternatively:
   #   - stay here in a `config.model 'ModelName' do ... end` block
   #   - go in the model definition file in a `rails_admin do ... end` block
-  
+
   # This is your choice to make:
   #   - This initializer is loaded once at startup (modifications will show up when restarting the application) but all RailsAdmin configuration would stay in one place.
   #   - Models are reloaded at each request in development mode (when modified), which may smooth your RailsAdmin development workflow.
@@ -50,5 +50,18 @@ RailsAdmin.config do |config|
   # Now you probably need to tour the wiki a bit: https://github.com/sferik/rails_admin/wiki
   # Anyway, here is how RailsAdmin saw your application's models when you ran the initializer:
 
+end
 
+if defined?(WillPaginate)
+  module WillPaginate
+    module ActiveRecord
+      module RelationMethods
+        def per(value = nil) per_page(value) end
+        def total_count() count end
+      end
+    end
+    module CollectionMethods
+      alias_method :num_pages, :total_pages
+    end
+  end
 end

@@ -1,0 +1,65 @@
+#posts-list
+  @extend .row-fluid
+  .post-box
+    width: 280px
+    float: left
+    margin: 10px
+    margin-bottom: 30px
+    @media screen and (min-width: 1200px)
+      width: 360px
+
+    @media screen and (max-width: 979px) and (min-width: 768px)
+      width: 210px
+
+    @media screen and (max-width: 768px)
+      float: none
+      width: 100%
+      margin:
+        left: 0
+        right: 0
+
+    h2
+      text-align: center
+      a
+        font-family: $dosis-semibold
+        background: $second-color
+        padding: 0 7px
+        +box-shadow(0px 2px 5px 0px darken($second-color, 20%))
+        display: inline
+        color: white
+
+
+    .categories
+      text-align: center
+
+    .created_at
+      text-align: right
+      margin: 20px 0
+
+    .detail
+      position: relative
+      min-height: 130px
+
+      .cover
+        width: 100%
+        position: absolute
+        top: 0
+        height: 130px
+        overflow: hidden
+        img
+          width: 100%
+          +transition(opacity 0.5s)
+          @media screen and (min-width: 480px) and (max-width: 768px)
+            display: none
+
+      &:hover
+        .cover
+          img
+            +opacity(0)
+
+
+
+
+  .loading
+    +clearfix
+
