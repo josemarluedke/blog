@@ -1,13 +1,20 @@
 h1 Listing posts
 
-table
+
+.filter-category.hide= params[:category]
+#posts-list
+  ul.list
+
+  .loading
+    span Loading...
+/table
   tr
     th Title
     th
     th
     th
 
-  - @posts.each do |post|
+  /- @posts.each do |post|
     tr
       td = post.title
       td = link_to 'Show', post

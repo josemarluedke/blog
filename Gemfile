@@ -31,6 +31,8 @@ gem 'rack-google-analytics'
 #gem 'simple_form'
 gem 'auto_html'
 gem 'friendly_id'
+gem 'will_paginate'
+gem 'jbuilder'
 
 # Administration
 gem 'rails_admin'
