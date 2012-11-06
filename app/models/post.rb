@@ -10,8 +10,6 @@ class Post < ActiveRecord::Base
   validates :slug, uniqueness: true
 
   auto_html_for :content do
-    youtube width: 460, height: 262
-    vimeo width: 460, height: 262
     redcarpet
   end
 
