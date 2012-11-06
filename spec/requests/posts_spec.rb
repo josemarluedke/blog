@@ -2,10 +2,15 @@ require 'spec_helper'
 
 describe "Posts" do
   describe "GET /posts" do
-    it "works! (now write some real specs)" do
-      # Run the generator again with the --webrat flag if you want to use webrat methods/matchers
+    it "should get the posts" do
       get posts_path
       response.status.should be(200)
+    end
+  end
+
+  describe "GET /:category" do
+    it "should raise 404 when has no post in the category" do
+      lambda { get "/Lorem" }.should raise_error(ActionController::RoutingError)
     end
   end
 end
