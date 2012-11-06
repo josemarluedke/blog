@@ -11,8 +11,10 @@ App.Posts.Index = App.PaginatedView.extend
   renderEmpty: ->
 
   modelView: Backbone.View.extend
-    tagName: 'li'
-    template: _.template('<h3><%= title %></h3> <p><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></p>')
+    tagName: 'section'
+    className: 'post-box'
+    template: (data)->
+      _.template($('#post_template').html(), data)
 
     render: ->
       this.$el.html @template(@model.toJSON())

@@ -1,5 +1,6 @@
 h1 Listing posts
 
+= render 'template'
 
 .filter-category.hide= params[:category]
 #posts-list
@@ -7,17 +8,3 @@ h1 Listing posts
 
   .loading
     span Loading...
-/table
-  tr
-    th Title
-    th
-    th
-    th
-
-  /- @posts.each do |post|
-    tr
-      td = post.title
-      td = link_to 'Show', post
-
-br
-
