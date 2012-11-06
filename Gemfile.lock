@@ -269,6 +269,7 @@ DEPENDENCIES
   ffaker
   foreigner
   friendly_id
+  has_scope
   heroku
   inherited_resources
   initjs

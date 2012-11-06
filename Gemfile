@@ -8,7 +8,7 @@ gem "foreigner"
 
 # Improvements
 gem 'inherited_resources'
-#gem 'has_scope'
+gem 'has_scope'
 
 # Authentication
 gem "devise"
