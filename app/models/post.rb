@@ -9,6 +9,12 @@ class Post < ActiveRecord::Base
   validates :title, :content, :slug, :author, presence: true
   validates :slug, uniqueness: true
 
+  auto_html_for :content do
+    youtube width: 460, height: 262
+    vimeo width: 460, height: 262
+    redcarpet
+  end
+
   def should_generate_new_friendly_id?
     new_record?
   end
