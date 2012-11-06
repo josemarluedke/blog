@@ -8,10 +8,15 @@ h1
   font-weight: 700
 
 a
-  color: darken($brown, 10%)
+  color: $second-color
   font-family: $droid-sans
   &:hover
-    color: lighten($brown, 20%)
+    color: darken($brown, 20%)
+
+#content
+  background: rgba($brown, 0.1)
+  padding: 10px
+  +border-radius(4px)
 
 section
   @extend .row-fluid

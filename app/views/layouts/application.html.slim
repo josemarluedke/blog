@@ -19,5 +19,6 @@ html
     = render 'layouts/flash', flash: flash if flash.present?
     .container
       = render 'layouts/header'
-      = yield
+      #content
+        = yield
       = render 'layouts/footer'
