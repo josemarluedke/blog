@@ -7,3 +7,4 @@ App = window.App =
       # Something here. This is called in every page, with or without Turbolinks.
     finish: ->
       # Something here. This is called in every page, with or without Turbolinks.
+  Posts: {}
