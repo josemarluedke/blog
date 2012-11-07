@@ -1,12 +1,12 @@
 script type="text/template" id="post_template"
   h2
     a href="<%= url %>" <%= title %>
+  .created_at <%= created_at %>
   .categories
     <% _.each(categories, function(category) { %>
       a.label.label-category href="<%= category.url %>" <%= category.name %>
       |  
     <% } ) %>
-  .created_at <%= created_at %>
   .detail
     .introduction
       <%= introduction %>

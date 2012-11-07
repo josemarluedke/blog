@@ -28,24 +28,27 @@
         display: inline
         color: white
 
-
     .categories
       text-align: center
+      margin: 20px 0
 
     .created_at
-      text-align: right
-      margin: 20px 0
+      text-align: center
 
     .detail
       position: relative
-      min-height: 130px
+      min-height: 80px
+      @media screen and (max-width: 979px)
+        min-height: 130px
 
       .cover
         width: 100%
         position: absolute
         top: 0
-        height: 130px
+        height: 80px
         overflow: hidden
+        @media screen and (max-width: 979px)
+          height: 130px
         img
           width: 100%
           +transition(opacity 0.5s)
