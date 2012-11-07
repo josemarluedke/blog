@@ -25,3 +25,14 @@ a
   margin-bottom: 30px
   color: $second-color
 
+#loading
+  @extend .hide
+  position: fixed
+  bottom: 25px
+  right: 25px
+  padding: 5px
+  background: $second-color
+  color: white
+  +border-radius(3px)
+  z-index: 1000
+  +box-shadow(0px 2px 5px 0px darken($second-color, 20%))

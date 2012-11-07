@@ -1,8 +1,21 @@
 App = window.App =
   Common:
     initPage: ->
-      # If you are using the Turbolinks and you need run a code only one time, put something here.
-      # if you're not using the turbolinks, there's no difference between init and initPage.
+      unless window.Turbolinks is undefined
+        $(document).bind "page:fetch", ->
+          $('#loading').show()
+
+        $(document).bind "page:restore", ->
+          $('#loading').hide()
+
+        $(document).bind "page:change", ->
+          $(window).scrollTop(0)
+
+          try
+              FB.XFBML.parse()
+          try
+              twttr.widgets.load()
+
     init: ->
       # Something here. This is called in every page, with or without Turbolinks.
     finish: ->
