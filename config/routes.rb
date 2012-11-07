@@ -7,6 +7,8 @@ Blog::Application.routes.draw do
 
   root :to => 'posts#index'
 
+  get '/feed', to: 'posts#index', format: :rss, as: :feed
+
   # Category (have to be in the end of file)
   get '/:category', to: 'posts#index', as: :category
 end

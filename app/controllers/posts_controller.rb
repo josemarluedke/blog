@@ -1,6 +1,7 @@
 class PostsController < InheritedResources::Base
   actions :index, :show
   respond_to :html, :json
+  respond_to :rss, only: [:index]
   has_scope :category
 
   protected
