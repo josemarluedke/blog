@@ -18,6 +18,7 @@ html
   body
     = initjs_tag
     = render 'layouts/flash', flash: flash if flash.present?
+    = render 'layouts/facebook-sdk'
     .container
       = render 'layouts/header'
       #content
