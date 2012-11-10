@@ -1,8 +1,12 @@
 footer
   .container
-    p
-      = link_to "http://creativecommons.org/licenses/by/3.0/", class: "creative-commons" do
-        #{image_tag "cc.png"} #{Time.now.year} - Josemar Davi Luedke
+    .row-fluid
+      p.left-content
+        = link_to "#{Time.now.year} - Josemar Davi Luedke", "http://creativecommons.org/licenses/by/3.0/", class: "myicon-creative-commons"
+      aside
+        = link_to "", "http://twitter.com/JosemarLuedke", class: "myicon-twitter", target: :_blank
+        = link_to "", "http://github.com/josemarluedke", class: "myicon-github", target: :_blank
+        = link_to "", feed_url, class: "myicon-feed", target: :_blank, data: { :"no-turbolink" => true }
 
     .credits
       | This page was made with 
@@ -18,3 +22,4 @@ footer
       |  and its code can be found 
       = link_to "here", "https://github.com/josemarluedke/blog", target: :_blank
       | .
+
