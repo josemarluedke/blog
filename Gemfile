@@ -28,7 +28,7 @@ gem 'initjs'
 gem 'rack-google-analytics'
 
 # Tools
-#gem 'simple_form'
+gem 'simple_form'
 gem 'auto_html'
 gem 'friendly_id'
 gem 'will_paginate'
