@@ -2,9 +2,7 @@ footer
   padding: 5px
   padding-top: 50px
   padding-bottom: 20px
-  font-family: $droid-serif
   font-weight: 400
-  //text-align: center
   margin-top: 80px
   background: rgba($brown, 0.1)
 
@@ -19,8 +17,10 @@ footer
     &:before
       content: "\24"
       padding-right: 5px
+
     @media screen and (max-width: 560px)
       font-size: 110%
+
   .myicon-feed, .myicon-twitter, .myicon-github
     margin: 0 5px
     font-size: 200%
@@ -45,14 +45,15 @@ footer
   .left-content
     float: left
     @extend .span8
+
   aside
     float: left
     @extend .span4
     text-align: right
 
   .credits
-    padding-top: 20px
     padding-bottom: 20px
+    font-size: 85%
 
     @media screen and (max-width: 560px)
       font-size: 80%
