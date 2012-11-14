@@ -1,6 +1,6 @@
 .post
   .created-at
-    = l @post.created_at, format: :long
+    = l @post.created_at.to_date, format: :long
   h1.title
     = @post.title
   .categories
