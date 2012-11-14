@@ -31,7 +31,7 @@ describe PostsController do
     it "assigns the requested category as @posts" do
       get :index, { category: @category.name }
       assigns(:posts).should have(2).items
-      assigns(:posts).should == [@post_1, @post_2]
+      assigns(:posts).should == [@post_2, @post_1]
     end
   end
 end
