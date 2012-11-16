@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   helper_method :avatar_url
 
   def avatar_url
-    "http://gravatar.com/avatar/#{Digest::MD5.new.update('josemarluedke@gmail.com')}.jpg?s=220"
+    "http://gravatar.com/avatar/#{Digest::MD5.new.update('josemarluedke@gmail.com')}.jpg?s=190"
   end
 
   protected

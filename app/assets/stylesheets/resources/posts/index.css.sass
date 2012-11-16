@@ -1,15 +1,19 @@
 #posts-list
   @extend .row-fluid
   .post-box
-    width: 280px
+    width: 260px
     float: left
     margin: 10px
-    margin-bottom: 30px
+    margin-bottom: 50px
+    padding-right: 20px
+    border-right: 1px dashed lighten($brown, 10%)
+    &:nth-child(3n+1)
+      clear: both
     @media screen and (min-width: 1200px)
-      width: 360px
+      width: 340px
 
     @media screen and (max-width: 979px) and (min-width: 768px)
-      width: 210px
+      width: 190px
 
     @media screen and (max-width: 768px)
       float: none
