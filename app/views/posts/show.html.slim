@@ -4,7 +4,7 @@
   h1.title
     = @post.title
   .categories
-    - for category in @post.categories do
+    - for category in @post.categories.default_order do
       = link_to(category.name, category_path(category.name), class: 'label label-category')
       |  
 
