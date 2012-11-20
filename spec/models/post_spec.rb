@@ -6,7 +6,6 @@ describe Post do
     it { should validate_presence_of :content }
     it { should validate_presence_of :slug }
     it { should validate_presence_of :author }
-    pending { Post.make!; should validate_uniqueness_of :slug }
   end
 
   describe "Associations" do
