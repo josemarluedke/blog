@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.8'
+gem 'rails', '3.2.9'
 
 # Database
 gem 'pg'
@@ -22,7 +22,6 @@ gem 'heroku'
 
 # Frontend stuff
 gem 'jquery-rails'
-gem "slim"
 gem "slim-rails"
 gem 'initjs'
 gem 'rack-google-analytics'
@@ -52,14 +51,14 @@ group :production do
 end
 
 group :development, :test do
-  gem "rspec-rails", ">= 2.11.0"
+  gem "rspec-rails", ">= 2.12.0"
   gem "shoulda-matchers"
   gem "machinist", ">= 2.0"
   gem "ffaker"
   gem 'database_cleaner'
   gem "capybara"
   gem "jasmine"
-  gem "pry"
+  gem 'pry'
   gem 'awesome_print'
 end
 group :development do
