@@ -1,3 +1,10 @@
+class HTMLwithCodeRay < Redcarpet::Render::HTML
+  def block_code(code, language)
+    CodeRay.scan(code, language).div(:css => :class)
+  end
+end
+
+
 class Post < ActiveRecord::Base
   belongs_to :author, class_name: "User", foreign_key: :user_id
   has_many :categorizations
@@ -18,7 +25,7 @@ class Post < ActiveRecord::Base
   scope :public, -> { where(published: true) }
 
   auto_html_for :content do
-    redcarpet
+    redcarpet renderer: HTMLwithCodeRay, markdown_options: { fenced_code_blocks: true }
   end
 
   def cover

@@ -32,6 +32,7 @@ gem 'auto_html'
 gem 'friendly_id'
 gem 'will_paginate'
 gem 'jbuilder'
+gem 'coderay'
 
 # Administration
 gem 'rails_admin'

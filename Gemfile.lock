@@ -272,6 +272,7 @@ DEPENDENCIES
   awesome_print
   bootstrap-sass
   capybara
+  coderay
   coffee-rails (~> 3.2.2)
   compass-rails (~> 1.0.3)
   database_cleaner
