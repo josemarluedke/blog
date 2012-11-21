@@ -2,6 +2,8 @@
   .created-at
     = l @post.created_at.to_date, format: :long
   h1.title
+    - content_for :title do
+      - @post.title
     = @post.title
   .categories
     - for category in @post.categories.default_order do

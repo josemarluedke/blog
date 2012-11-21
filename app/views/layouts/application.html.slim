@@ -1,12 +1,16 @@
 doctype html
 html
   head
-    title [Blog] Josemar Davi Luedke - Software Developer
+    title
+      - if yield(:title).present?
+        = title = "#{yield :title} · [Blog] Josemar Davi Luedke - Software Developer"
+      - else
+        = title = "[Blog] Josemar Davi Luedke - Software Developer"
     = stylesheet_link_tag "application"
     meta[charset="utf-8"]
     meta[name="viewport" content="width=device-width, initial-scale=1.0"]
      -# Meta tags for facebook social graph
-    meta property="og:title" content="[Blog] Josemar Davi Luedke - Software Developer"
+    meta property="og:title" content=title
     meta property="og:url" content="http://blog.josemarluedke.com"
     meta property="og:image" content=avatar_url.html_safe
     meta property="og:site_name" content="[Blog] Josemar Davi Luedke - Software Developer"
