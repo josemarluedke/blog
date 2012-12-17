@@ -1,7 +1,7 @@
 body
   background: image-url('background.png')
   font-family: $droid-sans
-  color: $brown
+  color: #666
 
 h1
   font-family: $droid-sans
@@ -14,7 +14,7 @@ a
     color: darken($brown, 20%)
 
 #content
-  background: rgba($brown, 0.1)
+  background: rgba(white, 0.6)
   padding: 10px
   +border-radius(4px)
   padding-top: 50px
@@ -24,6 +24,9 @@ a
   font-size: 350%
   margin-bottom: 30px
   color: $second-color
+  @media screen and (max-width: 768px)
+    font-size: 250%
+
 
 #loading
   @extend .hide
@@ -41,3 +44,11 @@ a
   font-family: $icons-font
   font-style: normal
   speak: none
+
+*::-moz-selection, ::selection
+  background: #F66
+  color: white
+  text-shadow: none
+
+pre, code
+  background: white
