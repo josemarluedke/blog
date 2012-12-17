@@ -7,6 +7,6 @@ class PostsController < InheritedResources::Base
   protected
   def collection
     return render_404 if params[:category].present? and not Post.category(params[:category]).any?
-    @posts ||= end_of_association_chain.order("created_at DESC").paginate(page: params[:page], per_page: 6).public
+    @posts ||= end_of_association_chain.order("created_at DESC").paginate(page: params[:page], per_page: 12).public
   end
 end
