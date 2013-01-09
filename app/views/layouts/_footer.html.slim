@@ -1,8 +1,9 @@
 footer
-  .container
+  .content
     .row-fluid
       p.left-content
-        = link_to "#{Time.now.year} - Josemar Davi Luedke", "http://creativecommons.org/licenses/by-nc/3.0/", class: "myicon-creative-commons", target: :_blank
+        = link_to "http://creativecommons.org/licenses/by-nc/3.0/", class: "myicon-creative-commons", target: :_blank, title: "Creative Commons Attribution-NonCommercial 3.0" do
+          span = "#{Time.now.year} - Josemar Davi Luedke"
       aside
         = link_to "", "http://twitter.com/JosemarLuedke", class: "myicon-twitter", target: :_blank
         = link_to "", "http://github.com/josemarluedke", class: "myicon-github", target: :_blank

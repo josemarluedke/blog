@@ -1,48 +1,42 @@
 header
   font-size: 75%
   margin-top: 50px
-  padding-bottom: 50px
-  margin-bottom: 50px
-  @extend .row-fluid
-  border-bottom: 1px dashed lighten($brown, 10%)
+  position: fixed
+  top: 0
+  left: 0
+  width: 25%
+  text-align: center
 
   .avatar
-    @extend .span4
-    float: left
-    text-align: center
+    width: 80%
+    margin: 0 auto
+    padding-bottom: 20px
     img
       +border-radius(50%)
       +box-shadow(0px 2px 5px 0px darken($brown, 10%))
+
   .name
-    @extend .span8
-    float: left
     color: $brown
-    text-align: center
     h1
       font-family: $dosis-semibold
-      font-size: 500%
+      font-size: 300%
       line-height: 110%
-      p
-        margin-top: 10px
-      a
-        font-family: $dosis-semibold
-        color: white
-        background: $second-color
-        padding: 0 10px
-        +box-shadow(0px 3px 5px 0px darken($second-color, 20%))
     h2
       font-family: $dosis-regular
+      font-size: 150%
 
-    @media screen and (max-width: 980px)
-      h1
-        font-size: 300%
-      h2
-        font-size: 150%
+  .blog-logo
+    font-family: $dosis-semibold
+    color: white
+    background: $second-color
+    display: inline-block
+    padding: 5px 10px
+    margin-bottom: 10px
+    +box-shadow(0px 3px 5px 0px darken($second-color, 20%))
 
-    @media screen and (max-width: 560px)
-      h1
-        font-size: 150%
-      h2
-        font-size: 100%
   @media screen and (max-width: 980px)
-    font-size: 100%
+    font-size: 60%
+
+  @media screen and (max-width: 900px)
+    position: relative
+    width: 100%

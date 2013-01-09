@@ -1,5 +1,6 @@
 #posts-list
   @extend .row-fluid
+
   .post-box
     width: 260px
     float: left
@@ -7,32 +8,15 @@
     margin-bottom: 50px
     padding-right: 20px
     border-right: 1px dashed lighten($brown, 10%)
+
     &:nth-child(3n+1)
       clear: both
-    @media screen and (min-width: 1200px)
-      width: 340px
-
-    @media screen and (max-width: 979px) and (min-width: 768px)
-      width: 190px
-
-    @media screen and (max-width: 768px)
-      float: none
-      width: 100%
-      margin:
-        left: 0
-        right: 0
-      h2
-        font-size: 160%
 
     h2
       text-align: center
       a
         font-family: $dosis-semibold
-        background: $second-color
-        padding: 0 7px
-        +box-shadow(0px 2px 5px 0px darken($second-color, 20%))
-        display: inline
-        color: white
+        color: $second-color
 
     .categories
       text-align: center
@@ -44,22 +28,16 @@
     .detail
       position: relative
       min-height: 80px
-      @media screen and (max-width: 979px)
-        min-height: 130px
 
       .cover
         width: 100%
         position: absolute
         top: 0
-        height: 80px
+        height: 120px
         overflow: hidden
-        @media screen and (max-width: 979px)
-          height: 130px
         img
           width: 100%
           +transition(opacity 0.5s)
-          @media screen and (min-width: 480px) and (max-width: 768px)
-            display: none
 
       &:hover
         .cover
@@ -71,3 +49,26 @@
     clear: both
     +clearfix()
 
+// --- Responsive ---
+#posts-list .post-box
+  @media screen and (max-width: 1268px), (max-width: 900px)
+    width: 230px
+
+  @media screen and (max-width: 1148px)
+    width: 210px
+
+  @media screen and (max-width: 1058px) and (min-width: 900px), (max-width: 798px)
+    width: 260px
+    &:nth-child(3n+1)
+      clear: none
+    &:nth-child(2n+1)
+      clear: both
+
+  @media screen and (max-width: 633px)
+    float: none
+    width: 100%
+    margin:
+      left: 0
+      right: 0
+    h2
+      font-size: 160%

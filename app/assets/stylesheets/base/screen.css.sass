@@ -13,20 +13,33 @@ a
   &:hover
     color: darken($brown, 20%)
 
-#content
+#content_wrapper
+  position: absolute
+  top: 0
+  right: 0
+  width: 75%
   background: rgba(white, 0.6)
-  padding: 10px
   +border-radius(4px)
   padding-top: 50px
+  min-height: 100%
+
+  @media screen and (max-width: 900px)
+    position: relative
+    width: 100%
+    min-height: auto
+
+.content
+  width: 95%
+  margin: 0 auto
+  max-width: 960px
 
 .title
   text-align: center
   font-size: 350%
   margin-bottom: 30px
   color: $second-color
-  @media screen and (max-width: 768px)
+  @media screen and (max-width: 798px)
     font-size: 250%
-
 
 #loading
   @extend .hide
