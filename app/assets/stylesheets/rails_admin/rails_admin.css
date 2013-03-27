@@ -1,8 +1,0 @@
-/*
- *= require rails_admin/imports.css.scss
-*/
-
-body.rails_admin .form-horizontal textarea {
-  width: 80%;
-  height: 400px;
-}
