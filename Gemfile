@@ -49,8 +49,6 @@ group :development, :test do
   gem 'machinist', '>= 2.0'
   gem 'ffaker'
   gem 'database_cleaner'
-  gem 'capybara'
-  gem 'jasmine'
   gem 'pry'
   gem 'awesome_print'
 end
