@@ -3,9 +3,9 @@ html
   head
     title
       - if yield(:title).present?
-        = title = "#{yield :title} · [Blog] Josemar Davi Luedke - Software Developer"
+        = title = "#{yield :title} · [Blog] Josemar Luedke - Software Developer"
       - else
-        = title = "[Blog] Josemar Davi Luedke - Software Developer"
+        = title = "[Blog] Josemar Luedke - Software Developer"
     = stylesheet_link_tag "application"
     meta[charset="utf-8"]
     meta[name="viewport" content="width=device-width, initial-scale=1.0"]
@@ -13,8 +13,8 @@ html
     meta property="og:title" content=title
     meta property="og:url" content=request.url
     meta property="og:image" content=avatar_url.html_safe
-    meta property="og:site_name" content="[Blog] Josemar Davi Luedke - Software Developer"
-    meta property="og:description" content="Josemar Davi Luedke is a Software Developer living in Porto Alegre/Brazil"
+    meta property="og:site_name" content="[Blog] Josemar Luedke - Software Developer"
+    meta property="og:description" content="Josemar Luedke is a Software Developer living in Porto Alegre/Brazil"
     = yield(:meta_tags)
     = csrf_meta_tag
     = javascript_include_tag "application"
