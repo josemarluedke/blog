@@ -29,4 +29,6 @@ html
         = yield
     = render 'layouts/footer'
     #loading
-      | Loading...
+      #back-overlay
+      #front-overlay
+        = image_tag 'loading.gif'

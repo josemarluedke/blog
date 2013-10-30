@@ -2,11 +2,12 @@ App = window.App =
   Common:
     initPage: ->
       unless window.Turbolinks is undefined
+        that = this
         $(document).bind "page:fetch", ->
-          $('#loading').show()
+          that.Loading.show()
 
         $(document).bind "page:restore", ->
-          $('#loading').hide()
+          that.Loading.hide()
 
         $(document).bind "page:change", ->
           $(window).scrollTop(0)
@@ -20,6 +21,12 @@ App = window.App =
       # Something here. This is called in every page, with or without Turbolinks.
     finish: ->
       # Something here. This is called in every page, with or without Turbolinks.
-  Collections: {}
-  Models: {}
+
+    Loading:
+      show: ->
+        $('#loading #back-overlay, #loading #front-overlay').fadeIn(2)
+      hide: ->
+        $('#loading #back-overlay, #loading #front-overlay').hide()
+
   Posts: {}
+

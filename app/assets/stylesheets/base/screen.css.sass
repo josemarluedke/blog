@@ -42,16 +42,24 @@ a
     font-size: 250%
 
 #loading
-  @extend .hide
-  position: fixed
-  bottom: 25px
-  right: 25px
-  padding: 5px
-  background: $second-color
-  color: white
-  +border-radius(3px)
-  z-index: 1000
-  +box-shadow(0px 2px 5px 0px darken($second-color, 20%))
+  #back-overlay
+    background-color: #fff
+    opacity: 0.5
+    height: 100%
+    width: 100%
+    position: fixed
+    left: 0px
+    top: 0px
+    z-index: 201
+    display: none
+  #front-overlay
+    height: 48px
+    width: 48px
+    position: fixed
+    left: 49%
+    top: 47%
+    z-index: 202
+    display: none
 
 [class^="myicon-"]:before, [class*=" myicon-"]:before
   font-family: $icons-font
