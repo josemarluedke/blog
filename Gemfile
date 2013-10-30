@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 ruby '2.0.0'
-gem 'rails', '3.2.13'
+gem 'rails', '3.2.15'
 
 # Database
 gem 'pg'
@@ -29,13 +29,13 @@ gem 'auto_html'
 gem 'friendly_id'
 gem 'will_paginate'
 gem 'jbuilder'
-gem 'coderay'
+gem 'coderay', '~> 1.0.9'
 
 # Administration
 gem 'rails_admin'
 
 group :assets do
-  gem 'sass-rails',   '~> 3.2.5'
+  gem 'sass-rails',   '~> 3.2.6'
   gem 'coffee-rails', '~> 3.2.2'
   gem 'compass-rails', '~> 1.0.3'
   gem 'bootstrap-sass'
