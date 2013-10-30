@@ -2,11 +2,18 @@
 
 .filter-category.hide= params[:category]
 #posts-list
-  h1.title
-    | Listing posts 
-    - if params[:category].present?
-      | categorized in #{params[:category]}
-  .list
+  - if params[:category].present?
+    h1.title Listing posts categorized in #{params[:category]}
 
-  .loading
-    = image_tag "loading.gif"
+  .list
+    - for post in collection
+      section.post-box
+        h2 = link_to post.title, post_path(post)
+        .created_at = l(post.created_at.to_date, format: :long)
+        .introduction = truncate(strip_tags(post.content_html), length: 250, separator: ' ').html_safe
+        .categories
+          - for category in post.categories
+            = link_to category.name, category_path(category.name), class: 'label label-category'
+
+
+
