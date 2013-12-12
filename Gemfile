@@ -1,7 +1,10 @@
 source 'https://rubygems.org'
 
 ruby '2.0.0'
-gem 'rails', '3.2.15'
+gem 'rails', '4.0.2'
+
+# To continue using attr_accessible on rails4
+gem 'protected_attributes'
 
 # Database
 gem 'pg'
@@ -35,11 +38,11 @@ gem 'coderay', '~> 1.0.9'
 gem 'rails_admin'
 
 group :assets do
-  gem 'sass-rails',   '~> 3.2.6'
-  gem 'coffee-rails', '~> 3.2.2'
-  gem 'compass-rails', '~> 1.0.3'
+  gem 'sass-rails', '~> 4.0.0'
+  gem 'coffee-rails', '~> 4.0.0'
+  gem 'compass-rails', "~> 1.1.2"
   gem 'bootstrap-sass'
-  gem 'uglifier', '>= 1.0.3'
+  gem 'uglifier', '~> 2.3.1'
   gem 'turbolinks'
 end
 

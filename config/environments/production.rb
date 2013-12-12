@@ -3,6 +3,7 @@ Blog::Application.configure do
   config.middleware.use Rack::GoogleAnalytics, :tracker => 'UA-13128274-3'
 
   # Settings specified here will take precedence over those in config/application.rb
+  config.eager_load = true
 
   # Code is not reloaded between requests
   config.cache_classes = true
