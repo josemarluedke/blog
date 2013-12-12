@@ -3,9 +3,6 @@ source 'https://rubygems.org'
 ruby '2.0.0'
 gem 'rails', '4.0.2'
 
-# To continue using attr_accessible on rails4
-gem 'protected_attributes'
-
 # Database
 gem 'pg'
 gem 'foreigner'
