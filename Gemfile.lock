@@ -221,7 +221,7 @@ DEPENDENCIES
   awesome_print
   bootstrap-sass (~> 2.3.1.0)
   coderay (~> 1.0.9)
-  coffee-rails (~> 4.0.0)
+  coffee-rails (~> 4.0.1)
   compass-rails (~> 1.1.2)
   database_cleaner
   devise
@@ -240,11 +240,11 @@ DEPENDENCIES
   rails (= 4.0.2)
   rails_admin
   rspec-rails (>= 2.12.0)
-  sass-rails (~> 4.0.0)
+  sass-rails (~> 4.0.1)
   shoulda-matchers
   simple_form
   slim-rails
   thin
   turbolinks
-  uglifier (~> 2.3.1)
+  uglifier (~> 2.3.2)
   will_paginate

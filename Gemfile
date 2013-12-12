@@ -35,11 +35,11 @@ gem 'coderay', '~> 1.0.9'
 gem 'rails_admin'
 
 group :assets do
-  gem 'sass-rails', '~> 4.0.0'
-  gem 'coffee-rails', '~> 4.0.0'
+  gem 'sass-rails', '~> 4.0.1'
+  gem 'coffee-rails', '~> 4.0.1'
   gem 'compass-rails', '~> 1.1.2'
   gem 'bootstrap-sass', '~> 2.3.1.0'
-  gem 'uglifier', '~> 2.3.1'
+  gem 'uglifier', '~> 2.3.2'
   gem 'turbolinks'
 end
 
