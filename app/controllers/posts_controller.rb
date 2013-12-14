@@ -11,7 +11,7 @@ class PostsController < InheritedResources::Base
 
   def collection
     return render_404 if params[:category].present? and not Post.category(params[:category]).any?
-    @posts ||= end_of_association_chain.order("created_at DESC").public
+    @posts ||= apply_scopes(end_of_association_chain).order("created_at DESC").public
   end
 
   def permitted_params
