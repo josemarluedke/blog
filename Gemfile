@@ -22,6 +22,7 @@ gem 'jquery-rails'
 gem 'slim-rails'
 gem 'initjs'
 gem 'rack-google-analytics'
+gem 'rails_12factor'
 
 # Tools
 gem 'simple_form'
