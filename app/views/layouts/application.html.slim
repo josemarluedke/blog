@@ -3,9 +3,9 @@ html
   head
     title
       - if yield(:title).present?
-        = title = "#{yield :title} · [Blog] Josemar Luedke - Software Developer"
+        = title = "#{yield :title} · Josemar Luedke's Blog"
       - else
-        = title = "[Blog] Josemar Luedke - Software Developer"
+        = title = "Josemar Luedke's Blog"
     = stylesheet_link_tag "application"
     meta[charset="utf-8"]
     meta[name="viewport" content="width=device-width, initial-scale=1.0"]
