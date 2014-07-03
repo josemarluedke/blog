@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
-ruby '2.1.0'
-gem 'rails', '4.0.2'
+ruby '2.1.2'
+gem 'rails', '4.0.8'
 
 # Database
 gem 'pg'
@@ -36,16 +36,16 @@ gem 'coderay', '~> 1.0.9'
 gem 'rails_admin'
 
 group :assets do
-  gem 'sass-rails', '~> 4.0.1'
+  gem 'sass-rails', '~> 4.0.3'
   gem 'coffee-rails', '~> 4.0.1'
-  gem 'compass-rails', '~> 1.1.2'
+  gem 'compass-rails', '~> 1.1.7'
   gem 'bootstrap-sass', '~> 2.3.1.0'
   gem 'uglifier', '~> 2.3.2'
   gem 'turbolinks'
 end
 
 group :development, :test do
-  gem 'rspec-rails', '>= 2.12.0'
+  gem 'rspec-rails', '~> 2.14.2'
   gem 'shoulda-matchers'
   gem 'machinist', '>= 2.0'
   gem 'ffaker'
