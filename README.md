@@ -1,6 +1,6 @@
-# Blog
+# Josemar Luedke's Blog
 
-Personal blog made with Slim, Saas, Compass & Bootstrap on top of Ruby on Rails 
+Personal blog made with Slim, Saas, Compass & Bootstrap on top of Ruby on Rails.
 
 
 ## Development environment
@@ -41,7 +41,7 @@ Then just checkout the code, configure dependencies and run the tests:
 
 3. Run the rspec
 
-	`rspec spec/`
+	`bundle exec rspec`
 
 
 ## Work left to do
